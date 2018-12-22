@@ -1,0 +1,1 @@
+export const operar = (a, b) => a + b
