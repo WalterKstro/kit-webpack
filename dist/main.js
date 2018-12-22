@@ -90,10 +90,23 @@
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-eval("var saludo = \"Hello\";\nconsole.log('Hola Mundo');\nconsole.log(\"\".concat(saludo, \" mundo\"));\n\n//# sourceURL=webpack:///./src/index.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _operacion__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./operacion */ \"./src/operacion.js\");\n\nvar saludo = \"Hello\";\nconsole.log('Hola Mundo');\nconsole.log(\"\".concat(saludo, \" mundo\"));\nObject(_operacion__WEBPACK_IMPORTED_MODULE_0__[\"operar\"])(10, 5);\n\n//# sourceURL=webpack:///./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/operacion.js":
+/*!**************************!*\
+  !*** ./src/operacion.js ***!
+  \**************************/
+/*! exports provided: operar */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"operar\", function() { return operar; });\nvar operar = function operar(a, b) {\n  return a + b;\n};\n\n//# sourceURL=webpack:///./src/operacion.js?");
 
 /***/ })
 
