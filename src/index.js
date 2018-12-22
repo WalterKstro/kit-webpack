@@ -6,6 +6,6 @@ import {
 let saludo = "Hello"
 
 
-console.log('Hola Mundo')
+console.log('Hola Webpack')
 console.log(`${saludo} mundo`)
-operar(10, 5)
+console.log(`La suma es: ${operar(10, 5)}`)
