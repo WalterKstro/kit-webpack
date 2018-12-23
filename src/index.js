@@ -8,4 +8,4 @@ let saludo = "Hello"
 
 console.log('Hola Webpack')
 console.log(`${saludo} mundo`)
-console.log(`La suma es: ${operar(10, 5)}`)
+console.log(`La suma es: ${operar(10, 10)}`)
