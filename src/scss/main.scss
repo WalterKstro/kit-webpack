@@ -1,0 +1,16 @@
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+h1 {
+   color: #ddd;
+   border-radius: 5px;
+   text-transform: uppercase;
+   padding: 30px;
+   border: 2px solid #ddd;
+
+}

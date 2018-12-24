@@ -1,3 +1,6 @@
+import css from './main.css'
+import scss from './scss/main.scss'
+
 import {
    operar
 } from './operacion'

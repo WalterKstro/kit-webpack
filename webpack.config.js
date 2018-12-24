@@ -4,6 +4,7 @@ const CleanWebpackPlugin = require("clean-webpack-plugin");
 const autoprefixer = require("autoprefixer");
 
 module.exports = {
+   devtool: 'source-map',
    module: {
       rules: [{
             test: /\.(js)$/,
@@ -22,10 +23,36 @@ module.exports = {
                   collapseWhitespace: false
                }
             }
+         },
+         {
+            test: /\.(css|scss)$/,
+            use: [
+               'style-loader',
+               MiniCssExtractPlugin.loader,
+               'css-loader?minimize&sourceMap',
+               {
+                  loader: 'postcss-loader',
+                  options: {
+                     autoprefixer: {
+                        browser: ['last 2 versions']
+                     },
+                     sourceMap: true,
+                     plugins: () => [autoprefixer]
+                  }
+               },
+               {
+                  loader: 'resolve-url-loader',
+                  options: {
+                     sourceMap: true
+                  }
+               },
+               'sass-loader?outputStyle=compressed&sourceMap'
+            ]
          }, {}, {}
       ]
    },
    plugins: [
+      new MiniCssExtractPlugin(),
       new HtmlWebpackPlugin({
          filename: 'index.html',
          template: './src/template.html',
