@@ -29,7 +29,7 @@ module.exports = {
             use: [
                'style-loader',
                MiniCssExtractPlugin.loader,
-               'css-loader?minimize&sourceMap',
+               'css-loader?sourceMap',
                {
                   loader: 'postcss-loader',
                   options: {
