@@ -34,14 +34,14 @@ body {
       top: 0;
       height: 100%;
       position: absolute;
-      background-color: lighten($color: orange, $amount: 20%);
+      background-color: darken($color: yellow, $amount: 10%);
       opacity: 0.6;
    }
 }
 
 h1 {
    position: relative;
-   color: #222;
+   color: #f6f6f6;
    border-radius: 5px;
    text-transform: uppercase;
    padding: 30px;

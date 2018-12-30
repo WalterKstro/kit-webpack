@@ -5,6 +5,13 @@ const autoprefixer = require("autoprefixer");
 const tinypngCompress = require("webpack-tinypng-compress");
 
 module.exports = {
+   entry: {
+      js: "./src/index.js",
+      vue: "./src/app.js"
+   },
+   output: {
+      filename: "[name].[chunkhash].js"
+   },
    devtool: "source-map",
    module: {
       rules: [{
@@ -81,14 +88,27 @@ module.exports = {
       ]
    },
    plugins: [
-      new CleanWebpackPlugin(['dist/**/*.*']),
+      new CleanWebpackPlugin(["dist/**/*.*"]),
       new tinypngCompress({
-         key: "YZ5hpRQCwYhg4GyRKpw2dvyMCXLS4RLV",
+         key: "YZ5hpRQCwYhg4GyRKpw2dvyMCXLS4RLV"
       }),
-      new MiniCssExtractPlugin(),
+      new MiniCssExtractPlugin({
+         filename: '[name].[chunkhash].css',
+         chunkFilename: '[id].css'
+      }),
       new HtmlWebpackPlugin({
          filename: "index.html",
          template: "./src/template.html",
+         chunks: ['js'],
+         meta: {
+            viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
+         },
+         inject: true
+      }),
+      new HtmlWebpackPlugin({
+         filename: "project.html",
+         template: "./src/template.html",
+         chunks: ['vue'],
          meta: {
             viewport: "width=device-width, initial-scale=1, shrink-to-fit=no"
          },
