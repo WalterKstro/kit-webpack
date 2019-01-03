@@ -1,6 +1,0 @@
-body{background-color:orange;height:100vh;display:flex}body>*{margin:auto;font-family:Roboto, serif;font-size:2.5rem}
-
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}body{background-image:url(images/js-logo.png);background-repeat:no-repeat;background-position:center;background-size:cover}body::before{content:'';width:100%;top:0;height:100%;position:absolute;background-color:#cc0;opacity:0.6}h1{position:relative;color:#f6f6f6;border-radius:5px;text-transform:uppercase;padding:30px}
-
-
-/*# sourceMappingURL=js.4fa61cb423def6c0545b.css.map*/
